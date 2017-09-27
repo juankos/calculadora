@@ -35,30 +35,57 @@ function init() {
     }
     dos.onclick = function (e) {
         display.textContent = display.textContent + '2';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     tres.onclick = function (e) {
         display.textContent = display.textContent + '3';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     cuatro.onclick = function (e) {
         display.textContent = display.textContent + '4';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     cinco.onclick = function (e) {
         display.textContent = display.textContent + '5';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     seis.onclick = function (e) {
         display.textContent = display.textContent + '6';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     siete.onclick = function (e) {
         display.textContent = display.textContent + '7';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     ocho.onclick = function (e) {
         display.textContent = display.textContent + '8';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     nueve.onclick = function (e) {
         display.textContent = display.textContent + '9';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     cero.onclick = function (e) {
         display.textContent = display.textContent + '0';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
     punto.onclick = function (e) {
         display.textContent = display.textContent + '.';
@@ -99,6 +126,7 @@ function init() {
     igual.onclick = function (e) {
         operandob = display.textContent;
         resolver();
+        
     }
 
 }
