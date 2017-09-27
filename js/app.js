@@ -22,78 +22,81 @@ function init() {
     var punto = document.getElementById('punto');
     var igual = document.getElementById('igual');
     var mas = document.getElementById('mas');
-	var sign = document.getElementById('sign');
+    var sign = document.getElementById('sign');
 
 
     //Eventos de click
 
-    uno.onclick = function(e) {
-        display.textContent = display.textContent + '1';      
+    uno.onclick = function (e) {
+        display.textContent = display.textContent + '1';
+        if(display.textContent.length>=9){
+            display.textContent=display.textContent='';
+        }
     }
-    dos.onclick = function(e) {
+    dos.onclick = function (e) {
         display.textContent = display.textContent + '2';
     }
-    tres.onclick = function(e) {
+    tres.onclick = function (e) {
         display.textContent = display.textContent + '3';
     }
-    cuatro.onclick = function(e) {
+    cuatro.onclick = function (e) {
         display.textContent = display.textContent + '4';
     }
-    cinco.onclick = function(e) {
+    cinco.onclick = function (e) {
         display.textContent = display.textContent + '5';
     }
-    seis.onclick = function(e) {
+    seis.onclick = function (e) {
         display.textContent = display.textContent + '6';
     }
-    siete.onclick = function(e) {
+    siete.onclick = function (e) {
         display.textContent = display.textContent + '7';
     }
-    ocho.onclick = function(e) {
+    ocho.onclick = function (e) {
         display.textContent = display.textContent + '8';
     }
-    nueve.onclick = function(e) {
+    nueve.onclick = function (e) {
         display.textContent = display.textContent + '9';
     }
-    cero.onclick = function(e) {
+    cero.onclick = function (e) {
         display.textContent = display.textContent + '0';
     }
-    punto.onclick = function(e) {
+    punto.onclick = function (e) {
         display.textContent = display.textContent + '.';
     }
-    sign.onclick = function(e) {
+    sign.onclick = function (e) {
         display.textContent = display.textContent + '-';
     }
-    dividido.onclick = function(e) {
+    dividido.onclick = function (e) {
         display.textContent = display.textContent + '*';
     }
-    por.onclick = function(e) {
+    por.onclick = function (e) {
         display.textContent = display.textContent + '/';
     }
 
-    on.onclick = function(e) {
+    on.onclick = function (e) {
         resetear();
     }
-    mas.onclick = function(e) {
+    mas.onclick = function (e) {
         operandoa = display.textContent;
         operacion = '+';
         limpiar();
     }
-    menos.onclick = function(e) {
+    menos.onclick = function (e) {
         operandoa = display.textContent;
         operacion = '-';
         limpiar();
     }
-    por.onclick = function(e) {
+    por.onclick = function (e) {
         operandoa = display.textContent;
         operacion = '*';
         limpiar();
     }
-    dividido.onclick = function(e) {
+    dividido.onclick = function (e) {
         operandoa = display.textContent;
         operacion = '/';
         limpiar();
     }
-    igual.onclick = function(e) {
+    igual.onclick = function (e) {
         operandob = display.textContent;
         resolver();
     }
@@ -105,7 +108,7 @@ function limpiar() {
 }
 
 function resetear() {
-    display.textContent = '0';
+    display.textContent = '';
     operandoa = 0;
     operandob = 0;
     operacion = '';
@@ -130,4 +133,5 @@ function resolver() {
     resetear();
     display.textContent = res;
 }
+
 
